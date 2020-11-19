@@ -1,4 +1,4 @@
-﻿@model Avram_Maria_Lab2.Models.Publishers
+﻿@model LibraryModel.Models.Publishers
 
 @{
     ViewData["Title"] = "Edit";
@@ -30,7 +30,7 @@
                             @{
                                 int cnt = 0;
 
-                                List<Avram_Maria_Lab2.Models.LibraryViewModels.PublishedBookData> books = ViewBag.Books;
+                                List<LibraryModel.Models.LibraryViewModels.PublishedBookData> books = ViewBag.Books;
                                 foreach (var book in books)
                                 {
                                     if (cnt++ % 3 == 0)

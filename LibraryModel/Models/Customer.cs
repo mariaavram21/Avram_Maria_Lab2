@@ -4,7 +4,7 @@ using System.Linq;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 
-namespace Avram_Maria_Lab2.Models
+namespace LibraryModel.Models
 {
     public class Customer
     {

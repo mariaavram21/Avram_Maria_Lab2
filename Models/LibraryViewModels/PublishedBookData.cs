@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace Avram_Maria_Lab2.Models.LibraryViewModels
+namespace LibraryModel.Models.LibraryViewModels
 {
     public class PublishedBookData
     {

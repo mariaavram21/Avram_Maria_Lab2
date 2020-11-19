@@ -5,10 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Avram_Maria_Lab2.Models;
+using LibraryModel.Models;
 using Microsoft.EntityFrameworkCore;
 using Avram_Maria_Lab2.Data;
-using Avram_Maria_Lab2.Models.LibraryViewModels;
+using LibraryModel.Models.LibraryViewModels;
+using LibraryModel.Data;
 
 namespace Avram_Maria_Lab2.Controllers
 {

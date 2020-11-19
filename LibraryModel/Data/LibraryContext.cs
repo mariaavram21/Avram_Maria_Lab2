@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Avram_Maria_Lab2.Models;
+using LibraryModel.Data;
+using LibraryModel.Models;
 
-namespace Avram_Maria_Lab2.Data
+namespace LibraryModel.Data
 {
     public class LibraryContext : DbContext
     {

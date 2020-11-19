@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Avram_Maria_Lab2.Data;
+using LibraryModel.Data;
 
 namespace Avram_Maria_Lab2
 {
