@@ -12,6 +12,8 @@ using Avram_Maria_Lab2.Data;
 using Microsoft.EntityFrameworkCore;
 using LibraryModel.Data;
 using Avram_Maria_Lab2.Hubs;
+using Microsoft.AspNetCore.Identity;
+
 namespace Avram_Maria_Lab2
 {
     public class Startup
@@ -30,10 +32,19 @@ namespace Avram_Maria_Lab2
 
             services.AddDbContext<LibraryContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))); 
             services.AddSignalR();
-        }
+
+            services.Configure<IdentityOptions>(options => { //default Password settings; 
+                options.Password.RequireDigit = false; 
+                options.Password.RequireLowercase = true; 
+                options.Password.RequireNonAlphanumeric = false; 
+                options.Password.RequireUppercase = false; 
+                options.Password.RequiredLength = 6;
+            });
+
+            }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+            public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
