@@ -5,12 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GrpcCustomerService\**" />
     <Compile Remove="LibraryModel\**" />
     <Compile Remove="LibraryWebAPI\**" />
+    <Content Remove="GrpcCustomerService\**" />
     <Content Remove="LibraryModel\**" />
     <Content Remove="LibraryWebAPI\**" />
+    <EmbeddedResource Remove="GrpcCustomerService\**" />
     <EmbeddedResource Remove="LibraryModel\**" />
     <EmbeddedResource Remove="LibraryWebAPI\**" />
+    <None Remove="GrpcCustomerService\**" />
     <None Remove="LibraryModel\**" />
     <None Remove="LibraryWebAPI\**" />
   </ItemGroup>
@@ -21,6 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.14.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.34.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.34.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="IKVM" Version="8.1.5717" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0" />
@@ -35,6 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Avram_Maria_Lab11\GrpcCustomerService\GrpcCustomerService.csproj" />
     <ProjectReference Include="LibraryModel\LibraryModel.csproj" />
   </ItemGroup>
 
